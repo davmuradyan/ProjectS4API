@@ -19,4 +19,20 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CRUDServices\MethodToolServices\" />
+    <Folder Include="CRUDServices\MethodServices\" />
+    <Folder Include="CRUDServices\KnowledgeServices\" />
+    <Folder Include="CRUDServices\HourServices\" />
+    <Folder Include="CRUDServices\ExamServices\" />
+    <Folder Include="CRUDServices\EvaluationServices\" />
+    <Folder Include="CRUDServices\DoHServices\" />
+    <Folder Include="CRUDServices\CoursePrerequisiteServices\" />
+    <Folder Include="CRUDServices\CourseServices\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectS4API.Data\ProjectS4API.Data.csproj" />
+  </ItemGroup>
+
 </Project>

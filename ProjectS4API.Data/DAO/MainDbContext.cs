@@ -8,7 +8,6 @@ namespace ProjectS4API.Data.DAO {
         public DbSet<CourseEntity> Courses { get; set; }
         public DbSet<CoursePrerequisiteEntity> Course_Prerequisites { get; set; }
         public DbSet<DoHEntity> Distribution_of_Hours { get; set; }
-        public DbSet<EvalCharsEntity> Evaluation_Characteristics { get; set; }
         public DbSet<EvaluationEntity> Evaluations { get; set; }
         public DbSet<ExamEntity> Exams { get; set; }
         public DbSet<HourEntity> Hours { get; set; }
