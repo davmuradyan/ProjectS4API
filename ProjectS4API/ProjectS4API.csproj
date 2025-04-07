@@ -21,12 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\ProjectS4API.Core\ProjectS4API.Core.csproj" />
+    <ProjectReference Include="..\ProjectS4API.Data\ProjectS4API.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProjectS4API.Core\ProjectS4API.Core.csproj" />
-    <ProjectReference Include="..\ProjectS4API.Data\ProjectS4API.Data.csproj" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

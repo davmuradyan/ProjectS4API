@@ -2,10 +2,10 @@
 
 namespace ProjectS4API.Core.CRUDServices.ResourcesServices {
     public interface IResourcesCRUDService {
-        Task<ResourcesEntity> Create(CreateResourcesDto dto);
-        Task<ResourcesEntity?> Read(int id);
-        Task<ICollection<ResourcesEntity>> ReadAll();
-        Task<ResourcesEntity?> Update(UpdateResourcesDto dto);
-        Task<ResourcesEntity?> Delete(int id);
+        public Task<ResourcesEntity> Create(CreateResourcesDto dto);
+        public Task<ResourcesEntity?> Read(int id);
+        public Task<ICollection<ResourcesEntity>> ReadAll();
+        public Task<ResourcesEntity?> Update(UpdateResourcesDto dto);
+        public Task<ResourcesEntity?> Delete(int id);
     }
 }

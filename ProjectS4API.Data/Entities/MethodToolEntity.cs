@@ -7,5 +7,6 @@
         public CourseEntity? Course { get; set; }
         public int MethodId { get; set; }
         public MethodEntity? Method { get; set; }
+
     }
 }
