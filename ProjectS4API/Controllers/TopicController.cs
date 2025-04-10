@@ -1,38 +1,52 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectS4API.Core.CRUDServices.TopicServices;
 
-namespace ProjectS4API.Controllers {
-    public class TopicController : Controller {
-        private ITopicCRUDService topicService;
-        public TopicController(ITopicCRUDService topicService) {
+namespace ProjectS4API.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class TopicController : ControllerBase
+    {
+        private readonly ITopicCRUDService topicService;
+
+        public TopicController(ITopicCRUDService topicService)
+        {
             this.topicService = topicService;
         }
 
-        [HttpGet("/CreateTopic")]
-        public IActionResult CreateTopic(CreateTopicDto dto) {
-            return Ok(topicService.Create(dto));
+        [HttpPost("CreateTopic")]
+        public async Task<IActionResult> CreateTopic([FromBody] CreateTopicDto dto)
+        {
+            var result = await topicService.Create(dto);
+            return Ok(result);
         }
 
-        [HttpGet("/GetTopic")]
-
-        public IActionResult ReadTopic(int id) {
-            return Ok(topicService.Read(id));
+        [HttpGet("GetTopic")]
+        public async Task<IActionResult> ReadTopic([FromQuery] int id)
+        {
+            var result = await topicService.Read(id);
+            return result != null ? Ok(result) : NotFound();
         }
 
-        [HttpGet("/GetAllTopics")]
-        public IActionResult ReadAllTopics() {
-            return Ok(topicService.ReadAll());
+        [HttpGet("GetAllTopics")]
+        public async Task<IActionResult> ReadAllTopics()
+        {
+            var result = await topicService.ReadAll();
+            return Ok(result);
         }
 
-        [HttpPut("/UpdateTopic")]
-        public IActionResult UpdateTopic(UpdateTopicDto dto) {
-            return Ok(topicService.Update(dto));
+        [HttpPut("UpdateTopic")]
+        public async Task<IActionResult> UpdateTopic([FromBody] UpdateTopicDto dto)
+        {
+            var result = await topicService.Update(dto);
+            return result != null ? Ok(result) : NotFound();
         }
 
-
-        [HttpDelete("/DeleteTopic")]
-        public IActionResult DeleteTopic(int id) {
-            return Ok(topicService.Delete(id));
+        [HttpDelete("DeleteTopic")]
+        public async Task<IActionResult> DeleteTopic([FromQuery] int id)
+        {
+            var result = await topicService.Delete(id);
+            return result != null ? Ok(result) : NotFound();
         }
-    }   
+    }
 }
