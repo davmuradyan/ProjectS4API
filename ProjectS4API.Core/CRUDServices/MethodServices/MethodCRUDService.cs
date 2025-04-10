@@ -17,7 +17,7 @@ namespace ProjectS4API.Core.CRUDServices.MethodServices
         {
             var entity = new MethodEntity
             {
-                Method = dto.Method
+                Method = dto.Method.ToLower()
             };
 
             db.Methods.Add(entity);

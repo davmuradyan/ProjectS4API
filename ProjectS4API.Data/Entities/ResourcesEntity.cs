@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public required string Core { get; set; }
-        public string Additional { get; set; } = null!;
-        public string Web { get; set; } = null!;
+        public string? Additional { get; set; } = null!;
+        public string? Web { get; set; } = null!;
     }
 }
