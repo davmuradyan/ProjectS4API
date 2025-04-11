@@ -18,7 +18,7 @@ namespace ProjectS4API.Core.CRUDServices.CoursePrerequisiteServices
             var entity = new CoursePrerequisiteEntity
             {
                 CourseId = dto.CourseId,
-                Prerequisite = dto.Prerequisite
+                PrerequisiteId = dto.Prerequisite
             };
 
             db.Course_Prerequisites.Add(entity);
@@ -48,7 +48,7 @@ namespace ProjectS4API.Core.CRUDServices.CoursePrerequisiteServices
             if (entity == null) return null;
 
             entity.CourseId = dto.CourseId;
-            entity.Prerequisite = dto.Prerequisite;
+            entity.PrerequisiteId = dto.Prerequisite;
 
             await db.SaveChangesAsync();
             return entity;
