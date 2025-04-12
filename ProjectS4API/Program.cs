@@ -14,6 +14,7 @@ using ProjectS4API.Core.CRUDServices.OngoingEvalServices;
 using ProjectS4API.Core.CRUDServices.PrerequisiteServices;
 using ProjectS4API.Core.CRUDServices.ProfessorServices;
 using ProjectS4API.Core.CRUDServices.ResourcesServices;
+using ProjectS4API.Core.PlandeCours.PlanDeCoursServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +42,7 @@ builder.Services.AddScoped<IDoHCRUDService, DoHCRUDService>();
 builder.Services.AddScoped<ICourseCRUDService, CourseCRUDService>();
 builder.Services.AddScoped<IExamCRUDService, ExamCRUDService>();
 builder.Services.AddScoped<IEvaluationCRUDService, EvaluationCRUDService>();
+builder.Services.AddScoped<IPlanDeCours, PlanDeCours>();
 
 
 

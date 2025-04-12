@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectS4API.Core.CRUDServices.TopicServices;
 
-namespace ProjectS4API.Controllers
+namespace ProjectS4API.Controllers.CRUD
 {
     [ApiController]
     [Route("[controller]")]
